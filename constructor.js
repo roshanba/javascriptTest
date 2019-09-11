@@ -1,11 +1,17 @@
 // constructor function 
 
-function elf (name, weapon){
+function Elf (name, weapon){
     this.name=name;
     this.weapon=weapon;
     }
 
-const roshan= new elf('Roshan','knife');
+// attaching prototype functions 
 
-console.log(roshan.name);
+Elf.prototype.attack=function(){
+    console.log("attack with "+ this.weapon);
+}
+
+const roshan= new Elf('Roshan','knife');
+roshan.attack();
+
 
